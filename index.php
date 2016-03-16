@@ -17,18 +17,18 @@ include('db.php');
 include('vars.php');
 
 //Query the DB
+global $mysqli;
 $strsql = "select * from stock";
 if ($result = $mysqli->query($strsql)) {
    // printf("<br>Select returned %d rows.\n", $result->num_rows);
 	while ($row = $result->fetch_object()) {
 		$items[] = clone $row;
 	}
-
+	$result->close();
 } else {
 	echo "Failed to query the database!";
 }
 
-$result->close();
 $mysqli->close();
 
 $lll_route = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
