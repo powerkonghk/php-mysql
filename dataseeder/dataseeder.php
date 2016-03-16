@@ -2,6 +2,8 @@
 include('db.php');
 include('vars.php');
 
+global $mysqli;
+
 // sql to create table
 $sql = "DROP TABLE STOCK";
 $result = $mysqli->query($sql);
@@ -38,5 +40,5 @@ foreach ($prints as $print) {
 	else print "Insert failed! ";
 }
 
-mysqli_close();
+$mysqli->close();
 ?>
