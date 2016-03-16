@@ -20,16 +20,16 @@ include('vars.php');
 $strsql = "select * from stock";
 if ($result = $mysqli->query($strsql)) {
    // printf("<br>Select returned %d rows.\n", $result->num_rows);
+	while ($row = $result->fetch_object()) {
+		$items[] = clone $row;
+	}
+
 } else {
 	echo "Failed to query the database!";
 }
 
-while ($row = mysqli_fetch_object($result)) {
-	$items[] = clone $row;
-}
-
 $result->close();
-mysqli_close();
+$mysqli->close();
 
 $lll_route = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
