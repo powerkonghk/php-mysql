@@ -40,6 +40,9 @@
           box-sizing: border-box;
 }
 
+
+
+
 article,
 aside,
 details,
@@ -3886,7 +3889,7 @@ input[type="submit"].btn.btn-mini {
 
 .alert,
 .alert h4 {
-  color: #c09853;
+  color: #FFFFFF;
 }
 
 .alert h4 {
