@@ -4,9 +4,15 @@ include('vars.php');
 
 global $mysqli;
 
+echo "Var dump mysqli:";
+var_dump($mysqli);
+
 // sql to create table
 $sql = "DROP TABLE STOCK";
 $result = $mysqli->query($sql);
+
+echo "Var dump result:";
+var_dump($result);
 
 $sql = "CREATE TABLE STOCK (ID BIGINT NOT NULL, DESCRIPTION VARCHAR(255), IMGSRC VARCHAR(255), PRICE INTEGER, QUAN INTEGER, TITLE VARCHAR(255), PRIMARY KEY (ID))";
 
