@@ -33,7 +33,9 @@ $mysqli->close();
 
 $lll_route = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-$item = $items[$_GET['id'] - 1];
+if (isset($_GET['id'])) {
+	$item = $items[$_GET['id'] - 1];
+}
 
 if (file_exists("views/$lll_route.tpl")) {
 	ob_start();
