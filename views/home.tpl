@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo $site_title; ?> </title>
+	<title><?php echo $site_title; ?> Yoyoyo! </title>
 	<meta charset="utf8">  
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
