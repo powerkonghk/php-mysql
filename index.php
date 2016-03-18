@@ -1,5 +1,6 @@
 <?php
-/* Store index page
+/* COMP5232 Project
+ * Store index page
  *
  * This script depends on the following code in .htaccess:
  *    <IfModule mod_rewrite.c>
